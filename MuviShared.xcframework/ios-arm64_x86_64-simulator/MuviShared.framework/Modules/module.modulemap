@@ -1,0 +1,6 @@
+framework module MuviShared {
+    umbrella header "MuviShared.h"
+
+    export *
+    module * { export * }
+}
