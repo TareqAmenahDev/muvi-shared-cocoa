@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name                     = 'shared'
-    spec.version                  = '0.0.1'
+    spec.version                  = '0.0.2'
     spec.homepage                 = 'Link to the Shared Module homepage'
     spec.source                   = { :http=> ''}
     spec.authors                  = ''
@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
     spec.summary                  = 'Some description for the Shared Module'
     spec.vendored_frameworks      = 'MuviShared.xcframework'
     spec.libraries                = 'c++'
-    spec.ios.deployment_target = '16.0'
+    spec.ios.deployment_target = '13.0'
                 
                 
                 
