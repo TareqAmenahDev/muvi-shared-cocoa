@@ -267,14 +267,15 @@ __attribute__((swift_name("AddOnItem")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("AlternativeItem")))
 @interface MuviSharedAlternativeItem : MuviSharedBase
-- (instancetype)initWithId:(NSString *)id name:(NSString * _Nullable)name imageUrl:(NSString * _Nullable)imageUrl price:(MuviSharedDouble * _Nullable)price calories:(MuviSharedInt * _Nullable)calories isVegan:(MuviSharedBoolean * _Nullable)isVegan modifierGroups:(MuviSharedModifiersGroup * _Nullable)modifierGroups __attribute__((swift_name("init(id:name:imageUrl:price:calories:isVegan:modifierGroups:)"))) __attribute__((objc_designated_initializer));
-- (MuviSharedAlternativeItem *)doCopyId:(NSString *)id name:(NSString * _Nullable)name imageUrl:(NSString * _Nullable)imageUrl price:(MuviSharedDouble * _Nullable)price calories:(MuviSharedInt * _Nullable)calories isVegan:(MuviSharedBoolean * _Nullable)isVegan modifierGroups:(MuviSharedModifiersGroup * _Nullable)modifierGroups __attribute__((swift_name("doCopy(id:name:imageUrl:price:calories:isVegan:modifierGroups:)")));
+- (instancetype)initWithId:(NSString *)id name:(NSString * _Nullable)name imageUrl:(NSString * _Nullable)imageUrl price:(MuviSharedDouble * _Nullable)price calories:(MuviSharedInt * _Nullable)calories isVegan:(MuviSharedBoolean * _Nullable)isVegan modifierGroups:(MuviSharedModifiersGroup * _Nullable)modifierGroups isOutOfStock:(BOOL)isOutOfStock __attribute__((swift_name("init(id:name:imageUrl:price:calories:isVegan:modifierGroups:isOutOfStock:)"))) __attribute__((objc_designated_initializer));
+- (MuviSharedAlternativeItem *)doCopyId:(NSString *)id name:(NSString * _Nullable)name imageUrl:(NSString * _Nullable)imageUrl price:(MuviSharedDouble * _Nullable)price calories:(MuviSharedInt * _Nullable)calories isVegan:(MuviSharedBoolean * _Nullable)isVegan modifierGroups:(MuviSharedModifiersGroup * _Nullable)modifierGroups isOutOfStock:(BOOL)isOutOfStock __attribute__((swift_name("doCopy(id:name:imageUrl:price:calories:isVegan:modifierGroups:isOutOfStock:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) MuviSharedInt * _Nullable calories __attribute__((swift_name("calories")));
 @property (readonly) NSString *id __attribute__((swift_name("id")));
 @property (readonly) NSString * _Nullable imageUrl __attribute__((swift_name("imageUrl")));
+@property (readonly) BOOL isOutOfStock __attribute__((swift_name("isOutOfStock")));
 @property (readonly) MuviSharedBoolean * _Nullable isVegan __attribute__((swift_name("isVegan")));
 @property (readonly) MuviSharedModifiersGroup * _Nullable modifierGroups __attribute__((swift_name("modifierGroups")));
 @property (readonly) NSString * _Nullable name __attribute__((swift_name("name")));
@@ -355,12 +356,13 @@ __attribute__((swift_name("FoodMenuItem")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ModifierItem")))
 @interface MuviSharedModifierItem : MuviSharedBase
-- (instancetype)initWithId:(NSString *)id name:(NSString * _Nullable)name price:(MuviSharedDouble * _Nullable)price __attribute__((swift_name("init(id:name:price:)"))) __attribute__((objc_designated_initializer));
-- (MuviSharedModifierItem *)doCopyId:(NSString *)id name:(NSString * _Nullable)name price:(MuviSharedDouble * _Nullable)price __attribute__((swift_name("doCopy(id:name:price:)")));
+- (instancetype)initWithId:(NSString *)id name:(NSString * _Nullable)name price:(MuviSharedDouble * _Nullable)price isOutOfStock:(BOOL)isOutOfStock __attribute__((swift_name("init(id:name:price:isOutOfStock:)"))) __attribute__((objc_designated_initializer));
+- (MuviSharedModifierItem *)doCopyId:(NSString *)id name:(NSString * _Nullable)name price:(MuviSharedDouble * _Nullable)price isOutOfStock:(BOOL)isOutOfStock __attribute__((swift_name("doCopy(id:name:price:isOutOfStock:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *id __attribute__((swift_name("id")));
+@property (readonly) BOOL isOutOfStock __attribute__((swift_name("isOutOfStock")));
 @property (readonly) NSString * _Nullable name __attribute__((swift_name("name")));
 @property (readonly) MuviSharedDouble * _Nullable price __attribute__((swift_name("price")));
 @end
