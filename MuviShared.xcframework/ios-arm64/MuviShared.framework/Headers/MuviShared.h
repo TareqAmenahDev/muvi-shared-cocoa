@@ -6,7 +6,7 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class MuviSharedAlternativeItem, MuviSharedModifiersCustomization, MuviSharedAlternativeCustomization, MuviSharedModifierItem, MuviSharedConcessionItemDetails, MuviSharedModifierGroupsCustomization, MuviSharedChildItemsCustomization, MuviSharedCartItem, MuviSharedConcessionItem, MuviSharedAddOnItem, MuviSharedModifiersGroup, MuviSharedUpsellingGroup, MuviSharedPackageChildItem, MuviSharedUpsellingItem, MuviSharedConcessionTab, MuviSharedFoodMenuItem, MuviSharedUpsellingItemSize, MuviSharedKotlinEnumCompanion, MuviSharedKotlinEnum<E>, MuviSharedKotlinArray<T>, MuviSharedKotlinThrowable, MuviSharedKotlinException, MuviSharedKotlinRuntimeException, MuviSharedKotlinIllegalStateException;
+@class MuviSharedAlternativeItem, MuviSharedModifiersCustomization, MuviSharedAlternativeCustomization, MuviSharedModifierItem, MuviSharedConcessionItemDetails, MuviSharedModifierGroupsCustomization, MuviSharedChildItemsCustomization, MuviSharedCartItem, MuviSharedConcessionItem, MuviSharedAddOnItem, MuviSharedModifiersGroup, MuviSharedUpsellingGroup, MuviSharedPackageChildItem, MuviSharedUpsellingItem, MuviSharedConcessionTab, MuviSharedFoodMenuItem, MuviSharedUpsellingItemSize, MuviSharedKotlinEnumCompanion, MuviSharedKotlinEnum<E>, MuviSharedKotlinArray<T>, MuviSharedConcessionsCart, MuviSharedKotlinThrowable, MuviSharedKotlinException, MuviSharedKotlinRuntimeException, MuviSharedKotlinIllegalStateException;
 
 @protocol MuviSharedKotlinx_coroutines_coreCoroutineScope, MuviSharedKotlinx_coroutines_coreStateFlow, MuviSharedKotlinComparable, MuviSharedKotlinCoroutineContext, MuviSharedKotlinx_coroutines_coreFlowCollector, MuviSharedKotlinx_coroutines_coreFlow, MuviSharedKotlinx_coroutines_coreSharedFlow, MuviSharedKotlinIterator, MuviSharedKotlinCoroutineContextElement, MuviSharedKotlinCoroutineContextKey;
 
@@ -142,6 +142,19 @@ __attribute__((swift_name("KotlinBoolean")))
 @interface MuviSharedBoolean : MuviSharedNumber
 - (instancetype)initWithBool:(BOOL)value;
 + (instancetype)numberWithBool:(BOOL)value;
+@end
+
+
+/**
+ * @note annotations
+ *   kotlin.js.ExperimentalJsExport
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GreetingClass")))
+@interface MuviSharedGreetingClass : MuviSharedBase
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (NSString *)greeting __attribute__((swift_name("greeting()")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -490,6 +503,12 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("CartItemKt")))
 @interface MuviSharedCartItemKt : MuviSharedBase
 + (BOOL)isEquals:(NSArray<MuviSharedCartItem *> *)receiver otherList:(NSArray<MuviSharedCartItem *> *)otherList __attribute__((swift_name("isEquals(_:otherList:)")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ConcessionsCartKt")))
+@interface MuviSharedConcessionsCartKt : MuviSharedBase
++ (MuviSharedConcessionsCart *)createConcessionCartInstance __attribute__((swift_name("createConcessionCartInstance()")));
 @end
 
 __attribute__((objc_subclassing_restricted))
