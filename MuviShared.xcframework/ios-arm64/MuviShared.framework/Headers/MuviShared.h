@@ -519,6 +519,12 @@ __attribute__((swift_name("ConcessionsCartExtensionsKt")))
 @end
 
 __attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("GreetingClassKt")))
+@interface MuviSharedGreetingClassKt : MuviSharedBase
++ (NSString *)greeting __attribute__((swift_name("greeting()")));
+@end
+
+__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("MapExtensionsKt")))
 @interface MuviSharedMapExtensionsKt : MuviSharedBase
 + (BOOL)deepEquals:(NSDictionary<id, id> * _Nullable)receiver other:(NSDictionary<id, id> * _Nullable)other __attribute__((swift_name("deepEquals(_:other:)")));
